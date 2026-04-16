@@ -11,34 +11,32 @@ banks_of_interest = [
 
 def fetch_rates():
     bank_data = {bank: {} for bank in banks_of_interest}
-    
-    # 建立 cloudscraper 物件，專門用來繞過網站的防機器人機制
     scraper = cloudscraper.create_scraper()
 
     for curr in currencies:
         url = f"https://www.findrate.tw/{curr}/"
         print(f"正在抓取 {curr}...")
         try:
-            # 使用 scraper 代替傳統的 requests
             res = scraper.get(url, timeout=15)
             res.encoding = 'utf-8'
             soup = BeautifulSoup(res.text, 'html.parser')
             
-            table = soup.find('table')
-            if not table:
-                print(f"  [警告] 找不到 {curr} 的表格，可能網站改版或又被擋下了！")
-                continue
-                
-            rows = table.find_all('tr')
+            # 【關鍵修改】：直接找尋網頁中所有的 <tr> (表格列)，不再侷限於第一個 <table>
+            rows = soup.find_all('tr')
             success_count = 0
+            
             for row in rows:
                 cols = row.find_all('td')
+                # 確認這是一行有包含匯率資料的列 (至少要有 5 個欄位)
                 if len(cols) >= 5:
                     bank_name_raw = cols[0].text.strip()
+                    # 檢查這一列的銀行名稱，是不是我們關注的十大行庫
                     matched_bank = next((b for b in banks_of_interest if b in bank_name_raw), None)
+                    
                     if matched_bank:
                         def parse_rate(text):
-                            cleaned = text.replace('--', '0').strip()
+                            # 把可能出現的逗號或無資料的 '--' 過濾掉
+                            cleaned = text.replace('--', '0').replace(',', '').strip()
                             try:
                                 return float(cleaned)
                             except ValueError:
@@ -51,7 +49,14 @@ def fetch_rates():
                             "spot_sell": parse_rate(cols[4].text)
                         }
                         success_count += 1
+                        
             print(f"  成功抓取 {success_count} 家銀行的 {curr} 匯率。")
+            
+            # 【關鍵修改】：如果還是 0 家，印出網頁標題來診斷是不是被防火牆擋住了
+            if success_count == 0:
+                page_title = soup.title.string if soup.title else '無標題'
+                print(f"  [診斷資訊] 找不到資料！當前網頁標題是: {page_title}")
+                
         except Exception as e:
             print(f"  抓取 {curr} 發生錯誤: {e}")
 
