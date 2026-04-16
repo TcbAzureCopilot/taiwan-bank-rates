@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣十大行庫匯率監控</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #f9f9f9; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        select { padding: 8px; margin-right: 10px; margin-bottom: 15px; font-size: 16px; border-radius: 4px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #0056b3; color: white; }
+        .cheapest { background-color: #d4edda; font-weight: bold; color: #155724; }
+        .update-time { color: #666; font-size: 0.9em; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>💰 外匯匯率比較 (找最便宜)</h2>
+        <div class="update-time">最後更新時間：<span id="update-time">讀取資料中...</span></div>
+
+        <div>
+            <select id="currency-select">
+                <option value="USD">美金 (USD)</option>
+                <option value="EUR">歐元 (EUR)</option>
+                <option value="CNY">人民幣 (CNY)</option>
+                <option value="JPY">日幣 (JPY)</option>
+                <option value="AUD">澳幣 (AUD)</option>
+            </select>
+
+            <select id="type-select">
+                <option value="spot_sell">即期賣出 (買外幣匯款)</option>
+                <option value="cash_sell">現鈔賣出 (買外幣現鈔)</option>
+                <option value="spot_buy">即期買入 (賣外幣回台幣)</option>
+                <option value="cash_buy">現鈔買入 (賣外幣現鈔)</option>
+            </select>
+        </div>
+
+        <table id="rate-table">
+            <thead>
+                <tr>
+                    <th>銀行</th>
+                    <th>匯率</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script>
+        let globalRates = [];
+
+        async function loadRates() {
+            try {
+                // 讀取我們之後會用 Python 自動產生的 JSON 檔案
+                const response = await fetch('rates.json');
+                const data = await response.json();
+                document.getElementById('update-time').innerText = data.update_time;
+                globalRates = data.rates;
+                renderTable();
+            } catch (error) {
+                console.error("無法讀取匯率資料", error);
+                document.getElementById('update-time').innerText = "尚無資料，請等待系統抓取...";
+            }
+        }
+
+        function renderTable() {
+            const currency = document.getElementById('currency-select').value;
+            const rateType = document.getElementById('type-select').value;
+            const tbody = document.querySelector('#rate-table tbody');
+            tbody.innerHTML = '';
+
+            // 整理資料並過濾掉沒有資料的銀行
+            let displayData = globalRates.map(bank => {
+                let rate = null;
+                if (bank[currency] && bank[currency][rateType]) {
+                    rate = bank[currency][rateType];
+                }
+                return { bank: bank.bank, rate: rate };
+            }).filter(item => item.rate !== null && item.rate > 0);
+
+            // 排序邏輯：買外幣(賣出)越低越好，賣外幣(買入)越高越好
+            const isSell = rateType.includes('sell');
+            displayData.sort((a, b) => isSell ? a.rate - b.rate : b.rate - a.rate);
+
+            // 產生表格內容
+            displayData.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                if (index === 0) tr.className = 'cheapest'; // 第一名標示綠底
+                
+                tr.innerHTML = `
+                    <td>${item.bank} ${index === 0 ? '🏆 最划算' : ''}</td>
+                    <td>${item.rate.toFixed(4)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        document.getElementById('currency-select').addEventListener('change', renderTable);
+        document.getElementById('type-select').addEventListener('change', renderTable);
+
+        loadRates();
+    </script>
+</body>
+</html>
