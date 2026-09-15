@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-09-15 09:19:29",
+  "update_time": "2026-09-15 10:08:37",
   "rates": [
     {
       "bank": "臺灣銀行",
@@ -37,22 +37,22 @@
     {
       "bank": "兆豐銀行",
       "USD": {
-        "cash_buy": 31.37,
-        "cash_sell": 32.04,
-        "spot_buy": 31.71,
-        "spot_sell": 31.81
+        "cash_buy": 31.4,
+        "cash_sell": 32.07,
+        "spot_buy": 31.74,
+        "spot_sell": 31.84
       },
       "EUR": {
-        "cash_buy": 35.85,
-        "cash_sell": 37.19,
-        "spot_buy": 36.47,
-        "spot_sell": 36.87
+        "cash_buy": 35.87,
+        "cash_sell": 37.21,
+        "spot_buy": 36.49,
+        "spot_sell": 36.89
       },
       "CNY": {
-        "cash_buy": 4.638,
-        "cash_sell": 4.8,
-        "spot_buy": 4.708,
-        "spot_sell": 4.758
+        "cash_buy": 4.641,
+        "cash_sell": 4.803,
+        "spot_buy": 4.712,
+        "spot_sell": 4.762
       },
       "JPY": {
         "cash_buy": 0.1963,
@@ -61,31 +61,31 @@
         "spot_sell": 0.2076
       },
       "AUD": {
-        "cash_buy": 22.26,
-        "cash_sell": 23.05,
-        "spot_buy": 22.54,
-        "spot_sell": 22.78
+        "cash_buy": 22.28,
+        "cash_sell": 23.07,
+        "spot_buy": 22.56,
+        "spot_sell": 22.8
       }
     },
     {
       "bank": "第一銀行",
       "USD": {
-        "cash_buy": 31.507,
-        "cash_sell": 32.022,
-        "spot_buy": 31.715,
-        "spot_sell": 31.815
+        "cash_buy": 31.539,
+        "cash_sell": 32.054,
+        "spot_buy": 31.747,
+        "spot_sell": 31.847
       },
       "EUR": {
-        "cash_buy": 36.152,
-        "cash_sell": 37.158,
-        "spot_buy": 36.455,
-        "spot_sell": 36.855
+        "cash_buy": 36.179,
+        "cash_sell": 37.185,
+        "spot_buy": 36.482,
+        "spot_sell": 36.882
       },
       "CNY": {
-        "cash_buy": 4.637,
-        "cash_sell": 4.79,
-        "spot_buy": 4.71,
-        "spot_sell": 4.76
+        "cash_buy": 4.64,
+        "cash_sell": 4.793,
+        "spot_buy": 4.713,
+        "spot_sell": 4.763
       },
       "JPY": {
         "cash_buy": 0.2017,
@@ -94,64 +94,64 @@
         "spot_sell": 0.2074
       },
       "AUD": {
-        "cash_buy": 22.342,
-        "cash_sell": 22.972,
-        "spot_buy": 22.557,
-        "spot_sell": 22.757
+        "cash_buy": 22.365,
+        "cash_sell": 22.995,
+        "spot_buy": 22.58,
+        "spot_sell": 22.78
       }
     },
     {
       "bank": "國泰世華",
       "USD": {
-        "cash_buy": 31.43,
-        "cash_sell": 32.03,
-        "spot_buy": 31.71,
-        "spot_sell": 31.81
+        "cash_buy": 31.47,
+        "cash_sell": 32.07,
+        "spot_buy": 31.75,
+        "spot_sell": 31.85
       },
       "EUR": {
-        "cash_buy": 36.03,
-        "cash_sell": 37.21,
-        "spot_buy": 36.46,
-        "spot_sell": 36.86
+        "cash_buy": 36.06,
+        "cash_sell": 37.24,
+        "spot_buy": 36.49,
+        "spot_sell": 36.89
       },
       "CNY": {
-        "cash_buy": 4.606,
-        "cash_sell": 4.776,
-        "spot_buy": 4.706,
-        "spot_sell": 4.756
+        "cash_buy": 4.61,
+        "cash_sell": 4.78,
+        "spot_buy": 4.71,
+        "spot_sell": 4.76
       },
       "JPY": {
-        "cash_buy": 0.1994,
-        "cash_sell": 0.2094,
-        "spot_buy": 0.2034,
-        "spot_sell": 0.2074
+        "cash_buy": 0.1995,
+        "cash_sell": 0.2095,
+        "spot_buy": 0.2035,
+        "spot_sell": 0.2075
       },
       "AUD": {
         "cash_buy": 0.0,
         "cash_sell": 0.0,
-        "spot_buy": 22.55,
-        "spot_sell": 22.77
+        "spot_buy": 22.57,
+        "spot_sell": 22.79
       }
     },
     {
       "bank": "玉山銀行",
       "USD": {
-        "cash_buy": 31.47,
-        "cash_sell": 32.02,
-        "spot_buy": 31.72,
-        "spot_sell": 31.82
+        "cash_buy": 31.5,
+        "cash_sell": 32.05,
+        "spot_buy": 31.75,
+        "spot_sell": 31.85
       },
       "EUR": {
-        "cash_buy": 36.18,
-        "cash_sell": 37.18,
-        "spot_buy": 36.48,
-        "spot_sell": 36.88
+        "cash_buy": 36.2,
+        "cash_sell": 37.2,
+        "spot_buy": 36.5,
+        "spot_sell": 36.9
       },
       "CNY": {
-        "cash_buy": 4.666,
-        "cash_sell": 4.826,
-        "spot_buy": 4.712,
-        "spot_sell": 4.762
+        "cash_buy": 4.668,
+        "cash_sell": 4.828,
+        "spot_buy": 4.714,
+        "spot_sell": 4.764
       },
       "JPY": {
         "cash_buy": 0.2025,
@@ -160,31 +160,31 @@
         "spot_sell": 0.2075
       },
       "AUD": {
-        "cash_buy": 22.26,
-        "cash_sell": 23.06,
-        "spot_buy": 22.55,
-        "spot_sell": 22.77
+        "cash_buy": 22.28,
+        "cash_sell": 23.08,
+        "spot_buy": 22.57,
+        "spot_sell": 22.79
       }
     },
     {
       "bank": "華南銀行",
       "USD": {
-        "cash_buy": 31.465,
-        "cash_sell": 32.065,
-        "spot_buy": 31.715,
-        "spot_sell": 31.815
+        "cash_buy": 31.5,
+        "cash_sell": 32.1,
+        "spot_buy": 31.75,
+        "spot_sell": 31.85
       },
       "EUR": {
-        "cash_buy": 36.167,
-        "cash_sell": 37.117,
-        "spot_buy": 36.487,
-        "spot_sell": 36.847
+        "cash_buy": 36.19,
+        "cash_sell": 37.14,
+        "spot_buy": 36.51,
+        "spot_sell": 36.87
       },
       "CNY": {
-        "cash_buy": 4.615,
-        "cash_sell": 4.783,
-        "spot_buy": 4.713,
-        "spot_sell": 4.757
+        "cash_buy": 4.618,
+        "cash_sell": 4.786,
+        "spot_buy": 4.716,
+        "spot_sell": 4.76
       },
       "JPY": {
         "cash_buy": 0.2004,
@@ -193,31 +193,31 @@
         "spot_sell": 0.2075
       },
       "AUD": {
-        "cash_buy": 22.341,
-        "cash_sell": 22.981,
-        "spot_buy": 22.561,
-        "spot_sell": 22.761
+        "cash_buy": 22.356,
+        "cash_sell": 22.996,
+        "spot_buy": 22.576,
+        "spot_sell": 22.776
       }
     },
     {
       "bank": "台新銀行",
       "USD": {
-        "cash_buy": 31.517,
-        "cash_sell": 31.994,
-        "spot_buy": 31.719,
-        "spot_sell": 31.819
+        "cash_buy": 31.551,
+        "cash_sell": 32.028,
+        "spot_buy": 31.753,
+        "spot_sell": 31.853
       },
       "EUR": {
-        "cash_buy": 36.163,
-        "cash_sell": 37.179,
-        "spot_buy": 36.496,
-        "spot_sell": 36.846
+        "cash_buy": 36.183,
+        "cash_sell": 37.199,
+        "spot_buy": 36.516,
+        "spot_sell": 36.866
       },
       "CNY": {
-        "cash_buy": 4.6431,
-        "cash_sell": 4.7731,
-        "spot_buy": 4.7121,
-        "spot_sell": 4.7581
+        "cash_buy": 4.6459,
+        "cash_sell": 4.7759,
+        "spot_buy": 4.7149,
+        "spot_sell": 4.7609
       },
       "JPY": {
         "cash_buy": 0.2015,
@@ -226,31 +226,31 @@
         "spot_sell": 0.207
       },
       "AUD": {
-        "cash_buy": 22.272,
-        "cash_sell": 23.056,
-        "spot_buy": 22.554,
-        "spot_sell": 22.774
+        "cash_buy": 22.287,
+        "cash_sell": 23.071,
+        "spot_buy": 22.569,
+        "spot_sell": 22.789
       }
     },
     {
       "bank": "合作金庫",
       "USD": {
-        "cash_buy": 31.399,
-        "cash_sell": 32.037,
-        "spot_buy": 31.714,
-        "spot_sell": 31.814
+        "cash_buy": 31.43,
+        "cash_sell": 32.068,
+        "spot_buy": 31.745,
+        "spot_sell": 31.845
       },
       "EUR": {
-        "cash_buy": 35.92,
-        "cash_sell": 37.185,
-        "spot_buy": 36.45,
-        "spot_sell": 36.85
+        "cash_buy": 35.94,
+        "cash_sell": 37.205,
+        "spot_buy": 36.47,
+        "spot_sell": 36.87
       },
       "CNY": {
-        "cash_buy": 4.605,
-        "cash_sell": 4.798,
-        "spot_buy": 4.708,
-        "spot_sell": 4.758
+        "cash_buy": 4.608,
+        "cash_sell": 4.801,
+        "spot_buy": 4.711,
+        "spot_sell": 4.761
       },
       "JPY": {
         "cash_buy": 0.1966,
@@ -261,8 +261,8 @@
       "AUD": {
         "cash_buy": 0.0,
         "cash_sell": 0.0,
-        "spot_buy": 22.56,
-        "spot_sell": 22.76
+        "spot_buy": 22.57,
+        "spot_sell": 22.77
       }
     }
   ]
