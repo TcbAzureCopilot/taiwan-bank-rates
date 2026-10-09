@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-10-09 11:10:42",
+  "update_time": "2026-10-09 12:08:02",
   "rates": [
     {
       "bank": "臺灣銀行",
@@ -43,10 +43,10 @@
         "spot_sell": 31.92
       },
       "EUR": {
-        "cash_buy": 34.99,
-        "cash_sell": 36.33,
-        "spot_buy": 35.61,
-        "spot_sell": 36.01
+        "cash_buy": 35.0,
+        "cash_sell": 36.34,
+        "spot_buy": 35.62,
+        "spot_sell": 36.02
       },
       "CNY": {
         "cash_buy": 4.667,
@@ -148,10 +148,10 @@
         "spot_sell": 36.01
       },
       "CNY": {
-        "cash_buy": 4.691,
-        "cash_sell": 4.851,
-        "spot_buy": 4.737,
-        "spot_sell": 4.787
+        "cash_buy": 4.692,
+        "cash_sell": 4.852,
+        "spot_buy": 4.738,
+        "spot_sell": 4.788
       },
       "JPY": {
         "cash_buy": 0.1989,
@@ -177,8 +177,8 @@
       "EUR": {
         "cash_buy": 0.0,
         "cash_sell": 0.0,
-        "spot_buy": 35.6,
-        "spot_sell": 36.001
+        "spot_buy": 35.601,
+        "spot_sell": 36.002
       },
       "CNY": {
         "cash_buy": 0.0,
@@ -208,16 +208,16 @@
         "spot_sell": 31.964
       },
       "EUR": {
-        "cash_buy": 35.312,
-        "cash_sell": 36.328,
-        "spot_buy": 35.645,
-        "spot_sell": 35.995
+        "cash_buy": 35.315,
+        "cash_sell": 36.331,
+        "spot_buy": 35.648,
+        "spot_sell": 35.998
       },
       "CNY": {
-        "cash_buy": 4.6711,
-        "cash_sell": 4.8011,
-        "spot_buy": 4.7401,
-        "spot_sell": 4.7861
+        "cash_buy": 4.6715,
+        "cash_sell": 4.8015,
+        "spot_buy": 4.7405,
+        "spot_sell": 4.7865
       },
       "JPY": {
         "cash_buy": 0.1979,
@@ -226,10 +226,10 @@
         "spot_sell": 0.2034
       },
       "AUD": {
-        "cash_buy": 21.871,
-        "cash_sell": 22.655,
-        "spot_buy": 22.153,
-        "spot_sell": 22.373
+        "cash_buy": 21.874,
+        "cash_sell": 22.658,
+        "spot_buy": 22.156,
+        "spot_sell": 22.376
       }
     },
     {
